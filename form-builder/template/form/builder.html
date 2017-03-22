@@ -1,0 +1,60 @@
+<div ng-init="getForm()">
+
+  <pre class="title-text bg-info"><h5>Form Builder</h5></pre>
+
+  <div class="button-outer-div"><a href="/forms"><button class="btn btn-primary"><i class="fa fa-list" aria-hidden="true"></i>
+Forms</button></a></div>
+  <div class="button-outer-div"><a href="/preview"><button class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i>
+Preview</button></a></div>
+  <div class="button-outer-div"><button class="btn btn-primary" ng-click="saveForm()"><i class="fa fa-floppy-o" aria-hidden="true"></i>
+Save Form</button></div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <legend>General</legend>
+      <div class="well form-general" style="background-color: #fdfdfd;">
+        <div class="row">
+          <div class="col-sm-2 ">
+            <label for="formName" class="control-label">Name</label>
+            <div class="input-group"> <input class="form-control" ng-model="form.name" name="formName" type="text">
+            </div>
+          </div>
+          <div class="col-sm-2 ">
+            <label for="coreType" class="control-label">Extends</label>
+            <div class="input-group">
+              <select class="form-control"> <option>Ticket</option><option>Data</option></select> </div>
+          </div>
+          <div class="col-sm-2 ">
+            <label for="displayAs " class="control-label ">Display Type</label>
+            <div class="input-group "> <select class="form-control form-type-select" ng-model="form.display " ng-options="display.name as display.title for display in displays "></select> </div>
+          </div>
+          <div class="col-sm-2 ">
+            <label for="future1" class="control-label ">Future 1</label>
+            <div class="input-group"> <input class="form-control" name="future1" type="text">
+            </div>
+          </div>
+          <div class="col-sm-2 ">
+            <label for="future2" class="control-label ">Future 2</label>
+            <div class="input-group"> <input class="form-control" name="future2" type="text">
+            </div>
+          </div>
+          <div class="col-sm-2 ">
+            <label for="future3" class="control-label ">Future 3</label>
+            <div class="input-group"> <input class="form-control" name="future3" type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+      <legend>Builder</legend>
+      <div class="well" style="background-color: #fdfdfd;">
+        <form-builder form="form"></form-builder>
+      </div>
+    </div>
+    <!-- <div class="col-sm-3">
+              <pre class="title-text bg-info"><h5>JSON Schema<code>$rootScope.form = </code> </h5></pre>
+              <div class="well jsonviewer">
+                <json-explorer data="form" collapsed="jsonCollapsed"></json-explorer>
+              </div>
+            </div> -->
+  </div>
+</div>
