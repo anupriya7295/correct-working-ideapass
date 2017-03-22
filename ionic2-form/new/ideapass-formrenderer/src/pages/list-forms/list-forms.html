@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{selectedItem}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ul>
+    <li *ngFor="let form of forms" (click)="itemTapped(form)">
+      <a>{{form}}</a>
+    </li>
+  </ul>
+
+
+</ion-content>

@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> {{selectedItem}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding *ngIf="renderForm" class="margin">
+
+  <formio [form]="form"></formio>
+
+</ion-content>
