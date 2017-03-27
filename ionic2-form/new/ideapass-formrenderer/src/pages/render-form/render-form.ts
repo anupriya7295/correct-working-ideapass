@@ -1,6 +1,6 @@
 import { Component ,OnInit ,ViewEncapsulation} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {Http, Response} from '@angular/http';
+import { Http, Response} from '@angular/http';
 
 @Component({
   selector: 'page-render-form',
@@ -12,6 +12,7 @@ export class RenderFormIonic implements OnInit{
   form:any;
   renderForm:any;
   data:any;
+
   ngOnInit(){
       this.selectedItem = this.navParams.get('name');
       this.http.get('assets/json/'+this.selectedItem+'.json')
